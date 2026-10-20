@@ -50,6 +50,14 @@ section {
   max-width: 500px;
 }
 
+#activities-container {
+  max-width: 760px;
+}
+
+#signup-container {
+  max-width: 360px;
+}
+
 section h3 {
   margin-bottom: 20px;
   padding-bottom: 10px;
@@ -72,6 +80,40 @@ section h3 {
 
 .activity-card p {
   margin-bottom: 8px;
+}
+
+.activity-controls {
+  display: grid;
+  grid-template-columns: minmax(0, 1.2fr) repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.activity-controls .form-group {
+  min-width: 0;
+  margin-bottom: 0;
+}
+
+.activity-controls input,
+.activity-controls select {
+  width: 100%;
+  min-width: 0;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+#activity-count {
+  margin-bottom: 12px;
+  color: #666;
+  font-size: 14px;
+}
+
+.activity-empty-state {
+  padding: 18px 0;
+  color: #666;
+  text-align: center;
 }
 
 /* New styles for participants section */
@@ -197,4 +239,10 @@ footer {
   margin-top: 30px;
   padding: 20px;
   color: #666;
+}
+
+@media (max-width: 640px) {
+  .activity-controls {
+    grid-template-columns: 1fr;
+  }
 }
